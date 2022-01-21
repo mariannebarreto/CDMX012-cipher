@@ -1,0 +1,43 @@
+body {
+    background-image:url(https://cdn.wallpapersafari.com/64/76/MQvXb6.jpg);
+  }
+
+  
+  .titulo-inicio {
+    color: rgb(248, 245, 252);
+  }
+  
+  .slogan {
+    color: rgb(248, 245, 252);
+  }
+#left{
+  padding: 80x;
+  width: 300px;
+  margin: 90px;
+  
+}
+  .admin{
+    color: rgb(248, 245, 252);
+  }
+
+
+  .cod-producto {
+    color: rgb(248, 245, 252);
+  }
+ 
+
+  .numberByUser {
+    color: rgb(248, 245, 252);
+  }
+  
+#right{
+  padding: 80x;
+  width: 300px;
+  margin: 90px;
+  
+  }
+  .vend{
+    color: rgb(248, 245, 252);
+  }
+  .producto{
+    color: rgb(248, 245, 252);
