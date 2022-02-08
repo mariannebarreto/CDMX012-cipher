@@ -41,7 +41,7 @@ y un botón de home.
 Al momento de realizar el primer boceto, aún no se tenía una idea clara de lo que contendría 
 la aplicación, pero sirvió para aterrizar las ideas.
 
-![boceto-papel](boceto papel 1.jpg)
+![boceto_papel](final.png)
 
 ## 5. Prototipo Figma
 
