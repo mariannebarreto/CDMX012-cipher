@@ -41,15 +41,12 @@ y un botón de home.
 Al momento de realizar el primer boceto, aún no se tenía una idea clara de lo que contendría 
 la aplicación, pero sirvió para aterrizar las ideas.
 
-![boceto-papel1]https://github.com/mariannebarreto/CDMX012-cipher/blob/main/src/boceto%20papel%201.jpg
-![boceto-papel2]https://github.com/mariannebarreto/CDMX012-cipher/blob/main/src/boceto%20papel%202.jpg
-
 ## 5. Prototipo Figma
 
 En el prototipo Figma se eligió la posible paleta de colores así como la distribución
 de los elementos dentro de la plataforma.
 
-![prototipo-Figma]https://github.com/mariannebarreto/CDMX012-cipher/blob/main/src/prototipo%20Figma.png
+
 
 ## 6. Agradecimientos.
 
