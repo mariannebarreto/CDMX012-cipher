@@ -1,60 +1,68 @@
-//inicio haciendo las constantes del bloque
+//declaro constantes que utilizaré
 const cipher = {encode,decode};
+
 export default cipher;
 
-//-----------ÁREA CIFRADO--------
 //declaro funciones
-function encode (productName,offset){
 
+//función cifrado
+function encode(offset,stringCipher){
 
-//variables a utilizar
-let productName= document.getElementById("productInput").value;
-let offset= parseInt(document.getElementById("numberInput")).value;
-let size= productName.length;
-var stringCipher= "";
-
-for (var i = 0; i<size; i++){  //pasa por cada caracter del string
-let asciiValue= productName.charcodeAt(i); //guarda el valor ASCII de cada caracter
-let cipherFormula;
-let cipherResult;
-
-if (asciiValue >= 65 && asciiValue <=90){
-  cipherFormula= (((asciiValue - 65 + offset) % 26) + 65);
-  cipherResult= String.fromCharCode(cipherFormula);
-  stringCipher += cipherResult;
-
-}else if (asciiValue >= 97 && asciiValue <= 122){
-  cipherFormula = (asciiValue- 97 + parseInt (offset))%26 + 97;
-  cipherResult= String.fromCharCode(cipherFormula);
-  stringCipher += cipherResult;
-}
-return stringCipher;
-}
-}
-
-//-----------------ÁREA DESCIFRADO------------
-
-function decode (codeName,offset2){   
-
-//variables a utilizar
-let codeName = document.getElementById ("codeInput").value;
-let offset2 = parseInt(document.getElementById("number_input")).value;
-var stringDecipher ="";
-
-  for(var i = 0; i< myString1.length ; i++){ //pasa por cada carácter del string
-    let ascii_value = codeName.charCodeAt(i); //guarda el valor ASCII de cada caracter
-    let decipherFormula;
-    let decipherResult;
-
-    if (ascii_value  >= 65 && ascii_value <= 90){
-      decipherFormula = ( ascii_value  -13 - parseInt(offset2)) % 26 + 65;
-      decipherResult = String.fromCharCode(decipherFormula);
-      stringDecipher += decipherResult;
-
-    }else if (ascii_value  >= 97 && ascii_value  <=122){
-      decipherFormula = ( ascii_value  - 45 - parseInt(offset2)) % 26 + 97;
-      stringDecipher = String.fromCharCode(decipherFormula);
-      stringDecipher += decipherResult;
+  if(typeof(stringCipher)!="string"){
+     throw new TypeError("Caracter inválido");
     }
- return stringDecipher;
+
+  var cipherOutCome = "";
+
+  for (var i = 0 ; i < stringCipher.length ; i++){
+   let keyNumber = stringCipher.charCodeAt(i);
+   let cipherFormula;
+   let resultCipher;
+   if (keyNumber >= 65 && keyNumber <= 90) {
+      cipherFormula = ( keyNumber - 65 + parseInt(offset)) % 26 + 65;
+      resultCipher =  String.fromCharCode(cipherFormula);
+      cipherOutCome +=resultCipher;
+   } else if (keyNumber >= 97 && keyNumber <=122) {
+     cipherFormula = ( keyNumber - 97 + parseInt(offset)) % 26 + 97;
+     resultCipher = String.fromCharCode(cipherFormula);
+     cipherOutCome +=resultCipher;
+}
+    else {
+
+      throw new TypeError("Caracter inválido");
+}
+}
+return cipherOutCome;
+}
+
+
+//función descifrado
+
+function decode(offset2,stringDecipher){
+  if(typeof(stringDecipher)!="string"){
+    throw new TypeError("Caracter inválido");
+   }
+  
+  var decipherOutCome ="";
+//declaro variables
+
+  for(var i = 0; i< stringDecipher.length ; i++){
+     let keyNumber2 = stringDecipher.charCodeAt(i);
+     let decipherFormula;
+     let resultDecipher;
+     if (keyNumber2 >= 65 && keyNumber2 <= 90){
+       decipherFormula = ( keyNumber2 -13 - parseInt(offset2)) % 26 + 65;
+       resultDecipher = String.fromCharCode(decipherFormula);
+       decipherOutCome +=resultDecipher;
+     }else if (keyNumber2 >= 97 && keyNumber2 <=122){
+       decipherFormula = ( keyNumber2 - 45 - parseInt(offset2)) % 26 + 97;
+       resultDecipher = String.fromCharCode(decipherFormula);
+       decipherOutCome +=resultDecipher;
+     } else {
+       
+      throw new TypeError("Carácter inválido");
+      
+     }
   }
+  return decipherOutCome;
+}
