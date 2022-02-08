@@ -1,28 +1,50 @@
-
 import cipher from './cipher.js';
 
-console.log(cipher);
-
-let offset = document.querySelector("numberInput");// almacena valor offset encode
-let offset2 = document.querySelector("number_input");// almacena valor offset decode
-let stringCipher = document.querySelector("productInput");//almacena texto a Cifrar
-let stringDecipher = document.querySelector("codeInput");//almacena texto a descifrar
+let string = document.querySelector("#productInput");//almacena texto a Cifrar
+let offset = document.querySelector("#numberInput");// almacena valor offset encode
+let string2 = document.querySelector("#codeInput");//almacena texto a descifrar
+let offset2 = document.querySelector("#numberInput2");// almacena valor offset decode
 
 
 
-//CLICK CIFRADO
+
+//Funciones de cover
+
+
+function continuar(){
+  let screenAdmin = document.getElementById("decipherVend");
+  screenAdmin. style.display = "none";
+  document.getElementById("cipherAdmin").style.display= "block";
+  document.getElementById("cover").style.display= "none";
+}
+
+document.getElementById("celticBtn").onclick = function() {continuar()};
+
+
+
+function continuar2(){
+  let screenVend = document.getElementById("cipherAdmin");
+  screenVend. style.display = "none";
+  document.getElementById("decipherVend").style.display= "block";
+  document.getElementById("cover").style.display= "none";
+}
+
+document.getElementById("celticBtn2").onclick = function() {continuar2()};
+
+
+//Funciones administrador/cipher
 function cipherClick(){
-  let newCode = cipher.encode(offset.value,stringCipher.value);
-  document.getElementById("cipherOut").innerText= newCode;
+  let word = cipher.encode(offset.value,string.value);
+  document.getElementById("cipherOut").innerText= word;
 
 }
 document.getElementById("cipher-button").onclick=function() {cipherClick()};
 
-//CLICK DESCIFRADO
+//funciones vendedor/decipher
 
 function decipherClick(){
-  let newProduct = cipher.decode(offset2.value,stringDecipher.value);
-  document.getElementById("decipher").innerText= newProduct;
+  let word1 = cipher.decode(offset2.value,string2.value);
+  document.getElementById("decipherOut").innerText= word1;
 
 }
 document.getElementById("decipher-button").onclick=function() {decipherClick()};

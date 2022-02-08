@@ -2,47 +2,135 @@ body {
   background-image:url(https://cdn.wallpapersafari.com/64/76/MQvXb6.jpg);
 }
 
+/*PÁGINA INICIO*/
+
+#cover{
+  height: 600px;
+  width: 500px;
+  margin:auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -310px;
+  margin-left: -255px;
+  border-radius: 8px;
+  border-style: double;
+  border-width: 5px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgb(26, 24, 24);
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  letter-spacing: 1px;
+}
 
 .titulo-inicio {
   color: rgb(248, 245, 252);
+  font-family: "Cinzel", serif;
+  font-size:250%;
 }
+
 
 .slogan {
   color: rgb(248, 245, 252);
+  font-family: "Satisfy", "cursive";
 }
-
-.info {
+#welcomeMessage {
 color: rgb(248, 245, 252);
+font-family: "Lustria", "serif";
 }
 
-#left{
-padding: 80x;
-width: 300px;
-margin: 90px;
 
+#cipherAdmin,
+#decipherVend{
+  display: none}
+
+
+#admin{
+color:rgb(248, 245, 252);
+margin: 80px 100px;
+font-family: "Lustria", serif;
 }
-.admin{
+
+#vend{
+  color: rgb(248,245,252);
+  margin: -190px 305px;
+  font-family: "Lustria", serif;
+}
+/*ADMINISTRADOR/CIFRAR*/
+
+
+#cipherAdmin{
+  height: 600px;
+  width: 500px;
+  margin:auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -310px;
+  margin-left: -255px;
+  border-radius: 8px;
+  border-style: double;
+  border-width: 5px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgb(26, 24, 24);
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+#cipherContent{
+  margin: auto;
+  width: 45%;
+}
+#productName{
   color: rgb(248, 245, 252);
+  font-family: "Lustria", serif;
+  font-size:85%;
 }
-
-
-.cod-producto {
+.productCipher{
   color: rgb(248, 245, 252);
+  font-family: "Lustria", serif;
+  font-size: small;
+}
+#back{
+  margin: -10px 228px;
 }
 
+/*VENDEDOR/DESCIFRAR*/
 
-.numberByUser {
+#decipherVend{
+  height: 600px;
+  width: 500px;
+  margin:auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -310px;
+  margin-left: -255px;
+  border-radius: 8px;
+  border-style: double;
+  border-width: 5px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgb(26, 24, 24);
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+#decipherContent{
+  margin: auto;
+  width: 45%;
+}
+#productCode{
   color: rgb(248, 245, 252);
+  font-family: "Lustria", serif;
+  font-size:85%;
 }
-
-#right{
-padding: 80x;
-width: 300px;
-margin: 90px;
-
-}
-.vend{
+.productDecipher{
   color: rgb(248, 245, 252);
+  font-family: "Lustria", serif;
+  font-size: small;
 }
-.producto{
-  color: rgb(248, 245, 252)}
+#back2{
+  margin: -10px 228px;
+}

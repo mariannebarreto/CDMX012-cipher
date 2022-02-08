@@ -4,42 +4,97 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Lustria&family=Satisfy&display=swap" rel="stylesheet">
   </head>
 
+<!---PORTADA-->
   <body>
-    <div id ="logo" style= "text-align: center;">
-      <img src="http://images.shejidaren.com/wp-content/uploads/2016/08/2138394-4d0d04de65d77753-1.png" width="200" height="150" ><br></div>
-    
-      <header>
-          <h1 class ="titulo-inicio" style="text-align:center">FOWLK</h1>
-      <p class ="slogan" style="text-align:center">Armonía para tu interior.<hr/></p>
-      
-    </div>
-    
-     <!--Área de cifrado y descifrado-->
+  <section id= "cover">
+    <div class="coverStyle" id="coverStyle" >
+        <div class ="logo" style= "text-align: center;">
+          <img src= "https://images.vexels.com/media/users/3/199483/isolated/preview/4154cafee9124b7ad618d75e6dea0e20-distintivo-de-coruja-preto-e-branco-by-vexels.png" width="130" height="130" ></div>
+              <h1 class ="titulo-inicio" style="text-align:center">FOWLK</h1>
+          <p class ="slogan" style="text-align:center">Armonía para tu interior.<hr/></p>
+          <div id ="welcomeMessage" style="text-align: center;"><br>Bienvenido a Fowlk. Elige la plataforma donde trabajarás.</div>
+          
+<!-----BOTONES-->
+  <div id = "admin">
+  <img id= "celticBtn" src="https://www.projectedimage.com/content/products/2014-10/l/5436573f98402.png" alt="celtic-admin"  width="90" height="90" 
+  onclick = "continuar();"><br>Administrador</div>
+  <div id= "vend">
+  <img id= "celticBtn2" src="https://www.projectedimage.com/content/products/2014-10/l/5436573f98402.png" alt="celtic-vend"  width="90" height="90" 
+  onclick = "continuar2();"><br>Vendedor</div>
 
-     <!--izquierda-->
-       <div id="left">
-        <h2 class ="admin" >Administrador.</h2>
-        <textarea id = "productInput" type="text" placeholder="Introduce el nombre del producto"></textarea>
-        <h4 class="numberByUser">Selecciona un número</h4>
-         <input id="numberInput" type="number" size="10"maxlength="2"name="number"></input>
-          <button onClick="cipher()" type= "button" class ="cipher-button" id= "cipher-button">Cifra</button>
-           <h4 class = "cod-producto">El código del producto es:</h4>
-          <textarea id="cipherOut" type="text" ></textarea>
-
-      </div>
-      
-    <!--derecha-->
-    <div id= "right">
-       <h2 class ="vend">Vendedor.</h2>
-       <textarea id ="codeInput" type= "text" placeholder="Introduce el código del producto"></textarea>
-       <input id="number_input" type="number" size="10"maxlength="2"name="number"></input>
-       <button onClick="decipher()" type= "button" class = "decipher-button" id= "decipher-button">Continuar</button>
-        <h4 class= "producto">El producto es:</h4>
-        <textarea id="decipher" type="text"></textarea>
-        
      </div>
+    </section>
+      
+
+<!-----ADMINISTRADOR/CIFRAR----->
+  
+<section id= "cipherAdmin">
+  
+  <div class="coverAdmin" id="coverAdmin">
+    <div id ="logo1" style= "text-align: center;">
+    <img src= "https://images.vexels.com/media/users/3/199483/isolated/preview/4154cafee9124b7ad618d75e6dea0e20-distintivo-de-coruja-preto-e-branco-by-vexels.png" width="130" height="130" ><br></div>
+    <h1 class ="titulo-inicio" style="text-align:center">FOWLK</h1>
+    <p class ="slogan" style="text-align:center">Armonía para tu interior.<hr/></p>
+    </div>
+        
+
+  <div id= "cipherContent"><br>
+    <textarea id = "productInput" type="text"  placeholder="Introduce el nombre del producto. No acepta ñ." required></textarea><br><br>
+     <div id= "productName">Selecciona un número del 1 al 33 para crear el código del producto.<br><br><input type="number" id="numberInput" min="1" max="33" name="numberInput" size="10" maxlength="2" title="secret number" required>
+     <button onClick="cipherClick()" type= "button" class ="cipher-button" id= "cipher-button">Continuar</button>
+     </div>
+    
+    
+    
+     <h4 class ="productCipher"><br>El código de tu producto es:<br><br>
+    <textarea id="cipherOut" name="cipherOut" disabled></textarea></h4>
+  
+
+    <div id= "back">
+    <a href="index.html">
+     <input id="backBtn" type="image" name="backBtn" src="https://static.vecteezy.com/system/resources/thumbnails/000/564/168/small/vector60-1863-01.jpg" width="40" height="40" alt="Regresar formulario"  title ="Home"></a>
+     </div>
+  </div>
+</section>
+
+
+      
+<!--VENDEDOR/DESCIFRADO------>
+
+<section id= "decipherVend">
+  
+  <div class="coverVend" id="coverVend">
+    <div id ="logo2" style= "text-align: center;">
+    <img src= "https://images.vexels.com/media/users/3/199483/isolated/preview/4154cafee9124b7ad618d75e6dea0e20-distintivo-de-coruja-preto-e-branco-by-vexels.png" width="130" height="130" ><br></div>
+    <h1 class ="titulo-inicio" style="text-align:center">FOWLK</h1>
+    <p class ="slogan" style="text-align:center">Armonía para tu interior.<hr/></p>
+    </div>
+        
+
+  <div id= "decipherContent"><br>
+    <textarea id = "codeInput" type="text"  placeholder="Introduce el código del producto." required></textarea><br><br>
+     <div id= "productCode">Ingresa el número que aparece en el código del producto<br><br><input type="number" id="numberInput2" min="1" max="33" name="numberInput2" size="10" maxlength="2" title="secret number2" required>
+     <button onClick="decipherClick" type= "button" class ="decipher-button" id= "decipher-button">Continuar</button>
+     </div>
+    
+    
+    
+     <h4 class ="productDecipher"><br>El nombre de tu producto es:<br><br>
+    <textarea id="decipherOut" name="decipherOut" disabled></textarea></h4>
+  
+
+    <div id= "back2">
+    <a href="index.html">
+     <input id="backBtn2" type="image" name="backBtn" src="https://static.vecteezy.com/system/resources/thumbnails/000/564/168/small/vector60-1863-01.jpg" width="40" height="40" alt="Regresar formulario"  title ="Home"></a>
+     </div>
+  </div>
+</section>
+
 
      <script src="index.js" type="module"></script>
   <script src="cipher.js" type="module"></script>
